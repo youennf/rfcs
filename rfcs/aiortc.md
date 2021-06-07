@@ -9,7 +9,7 @@ This is a proposal to make use of aiortc, a WebRTC stack implemented in python, 
 ## Background
 
 Current WebRTC testsuite is testing API extensively but it is difficult to validate that these APIs actually do what they are intended to do.
-As an example, WebRTC tests can validate that WebRTC stats are gathered but it is difficult to validate that WebRTC stats values acutally make sense.
+As an example, WebRTC tests can validate that WebRTC stats are gathered but it is difficult to validate that WebRTC stats values actually make sense.
 To improve WebRTC test coverage, the plan would be to build an aiortc peer that could be used by the test page to validate what goes on the wire.
 
 
