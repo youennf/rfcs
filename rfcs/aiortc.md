@@ -18,7 +18,9 @@ To improve WebRTC test coverage, the plan would be to build an aiortc peer that 
 As illustrated in https://www.w3.org/2011/04/webrtc/wiki/images/0/0c/WebRTCWG-2021-02-22.pdf, slide 12, aiortc can be used to implement custom WebRTC endpoints.
 As an example, a WebRTC endpoint could forward any network data it receives from DTLS to the test page through WebSocket.
 It will then be up to the web page to parse and validate the data coming back through WebSocket.
-
+Examples of this approach are available at https://github.com/jlaine/aiortc-wpt-demo:
+- A main python script (https://github.com/jlaine/aiortc-wpt-demo/blob/main/demo.py) implements a WebRTC peer and does packet forwarding to the web client.
+- The web client uses the main python script to create a WebRTC peer and validate packets (https://github.com/jlaine/aiortc-wpt-demo/blob/main/htdocs/nack.html)
 
 ## Architecture
 
@@ -29,15 +31,16 @@ These server python scripts would use the aiortc library to run the non-browser 
 ## Dependencies
 
 aiortc is using the following dependencies:
-* aioice
-* av
-* cffi
-* crc32c. Due to crc32c license, a plan might be to use google-crc32c as a replacement.
+* aioice.
+* av.
+* cffi.
+* google-crc32c.
 * cryptography. This is already a dependency.
 * dataclasses. This is already a dependency.
-* pyee
-* pylibsrtp
+* pyee.
+* pylibsrtp.
 
+All dependencies are compatible with WPT own license.
 
 ### Outcomes and risks
 
