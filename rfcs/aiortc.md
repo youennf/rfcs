@@ -24,9 +24,9 @@ Examples of this approach are available at https://github.com/jlaine/aiortc-wpt-
 
 ## Architecture
 
-Test writers would typically author a WebSocket server python scripts that would be used to start, set up and close a non-browser WebRTC peer.
-These server python scripts would use the aiortc library to run the non-browser WebRTC peer.
+Test writers would typically write WPT tests that depend on defined behaviors of the websocket server - procedures to start, set up and close a non-browser WebRTC peer. These server python scripts would use the aiortc library to run the non-browser WebRTC peer.
 
+If required, the test writers could submit requests for changes to those standard behaviors to allow particular kinds of testing.
 
 ## Dependencies
 
